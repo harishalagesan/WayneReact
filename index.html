@@ -1,0 +1,200 @@
+ <html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Harish Alagesan Says, there is no spoon."/>
+	  
+      <title> Resume | Harish Alagesan </title>
+      <!-- fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,600italic,700,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="style/font-mfizz.css">
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <!-- custom -->
+      <link href="style/style.css" rel="stylesheet"> 
+      <link type="text/css" rel="stylesheet" href="style/materialize.min.css"  media="screen,projection"/>
+     </head>
+      <body>
+        
+        <div id="content"></div>
+        <script src="https://fb.me/react-0.14.6.js"></script>
+        <script src="https://fb.me/react-dom-0.14.6.js"></script>
+        <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+        <script type="text/jsx">
+        
+        var DATA = {
+          name : "Hi, I'm Harish",
+          subtext: "Developer and Analyst based in Rochester, NY",
+          currentStatus: "Graduate student at Rochester Institute of Technology",
+          githubURL: 'https://github.com/harishalagesan',
+          linkedinURL: 'https://www.linkedin.com/in/harishalagesan',
+          resumewdURL: 'http://harishalagesan.me/resume/Web%20Development.pdf',
+		  resumedaURL: 'http://harishalagesan.me/resume/Data%20Analytics.pdf'
+        }
+        
+        var App = React.createClass ({
+        render : function(){
+        
+        return (
+		<div className ="bestapp">
+        <div className="app">
+            <Top
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.currentStatus}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+        </div>
+		<div className="newapp">
+		   <Down
+              intro={this.props.profileData.intro}
+              resumewdURL={this.props.profileData.resumewdURL}
+			  resumedaURL={this.props.profileData.resumedaURL}
+            />
+         </div>
+		 </div>
+        
+            ); 
+           } 
+        });
+        
+        
+      var Top = React.createClass({
+      render: function() {
+        return(
+          <div className="top">
+            <div className="top-img"></div>
+			<div className="top-me"></div>
+            <div className="top-content">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="currentStatus">{this.props.jobStatus}</div>
+                <div className="social-media">
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+    
+	 var Down = React.createClass({
+      render: function() {
+        return(
+          <div className="down">
+            <div className="down-content">
+              <div className="introduction">
+				<div className="down-img"></div>
+					<h4>Intro</h4>
+						<div className="content">
+						  <p className="intro-p">I&#39;m a final year Graduate student pursuing Masters in Information Science and Technology at Rochester Institute of Technology</p>
+						  <p className="intro-p">I&#39;m an experienced mobile web application and software application tool developer currently majoring in a field that is a combination of Web Development and Data Analytics</p>
+						  <span className="intro-p job-pls">I&#39;m looking to leverage web development and predictive analytics expertise in the IT industry into a full time role with leading IT corporations</span>
+						</div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Technical: &nbsp;</strong>
+                    <span>HTML5, JavaScript, CSS, PHP, BML, Java, R studio, Python, jQuery, Tableau, MySQL, C, C++, C#, Weka</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Functional: &nbsp;</strong>
+                    <span>Full Stack Development, Front End Development, Web development, Data Analytics and Predictive Analytics</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Other: &nbsp;</strong>
+                    <span>Agile methodology, Data Mining, Data Warehousing, Dimensional Modelling, Workflow Development, Requirement Analysis and Unit Testing</span>
+                  </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="university"><a href="http://www.rit.edu/" target="_blank">Rochester Institute of Technology</a></div>
+                  <div className="college"><a href="http://www.rit.edu/gccis/" target="_blank">College of Computing and Information Science</a></div>
+                  <div className="major"><strong>Major:</strong> Information Science and Technology</div>
+                  <div className="conc"><strong>Concentration:</strong> Web development and Data analytics</div>
+                  <div className="grad-date">Expected Graduation: Dec 2017</div>
+                </div>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" target="_blank">Sway Techno Solutions (P) Ltd.</a>
+                      <div className="duration">Nov 2013 &mdash; Dec 2014</div>
+                    </div>
+                    <div className="title">Member of Technical Staff</div>
+                    <ul className="description">
+                      <li>Designed testing applications and built test documents to execute test scenarios for M2M asset tracking applications</li>
+                      <li>Managed project progress and setup review meetings as a scrum master and generated reports</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" target="_blank">Wipro Technologies</a>
+                      <div className="duration">Sept 2010 &mdash; Sept 2013</div>
+                    </div>
+                    <div className="title">Project Engineer</div>
+                    <ul className="description">
+                      <li>Designed and developed printer configuration tools for sales representatives in Xerox enabling easily customizable options</li>
+                      <li>Designed and developed costing and pricing tool for Xerox financial print services</li>
+                      <li>Designed and developed Workflow and global approval process for print services in Xerox integrating sales representatives and approval managers from across the globe into one system under a single platform</li>
+					  <li>Developed a web application interface through BigMachines development kit combined with HTML5 and JavaScript</li>
+					  <li>Created new functionalities (timer) that proved to be an effective tool by itself for the organization and the clients</li>
+					  <li>Developed testing tools, created design, test, user documents and release notes thus minimizing outsourced testing costs</li>
+					  <li>Mentored new recruits and trained new employees from the practice on the new platform and process</li>  
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="projects">
+                <h4>Recent Academic Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="http://harishalagesan.me/" target="_blank">harishalagesan.me</a>
+                    <p className="project-desc">Simple Portfolio site to showcase my skills and most recent academic work</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://github.com/harishalagesan/MusicVerse" target="_blank">MusicVerse</a>
+                    <p className="project-desc">An e-commerce website for a new E-tailer (PHP, HTML5,CSS, MySQLi)for my Server Design and Development class. The idea was to provide a basic representation of features such as user registration, user login, genre based display of
+												products, user search based display, creation of cart, checkout page, adding and removing items with all information stored and retrieved from a database.</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://github.com/harishalagesan/RESTful-Lab-Appointment-Management-System" target="_blank">RESTful Lab Appointment Management System</a>
+                    <p className="project-desc">An Appointment management website(PHP Client(jQuery, JavaScript,HTML5) Server(Java) executing a REST service. Showcases GET, POST and PUT requests with a REST Client using PHP </p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://github.com/harishalagesan/IST-website-of-RIT-through-a-windows-form-application" target="_blank">ist.rit</a>
+                    <p className="project-desc"> View of the IST website of RIT.Created to provide students an experience browsing the courses offered in RIT through a windows form application</p>
+                  </div>
+                </div>
+              </div>
+              <a className="resume_web" href={this.props.resumewdURL} target="_blank"><div className="resume-link">My Web Development Resume</div></a>
+			  <a className="resume_data" href={this.props.resumedaURL} target="_blank"><div className="resume-link">My Data Analytics Resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+    
+    
+      ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+
+  </script>
+</body>
+   
+</html>
+   
